@@ -71,7 +71,8 @@ class Forecast extends Component {
         ]
 
         let forecastBlocks = weatherData.map((arr, key) => {
-            return <ForecastBlock data={arr} type='' key={key + 1} />
+            const type = (key == 0)? 'today' : ''
+            return <ForecastBlock data={arr} type={type}  key={key + 1} />
         });
         if (forecastBlocks.length === 0) {
             forecastBlocks = null;
