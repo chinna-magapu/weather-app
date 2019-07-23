@@ -6,31 +6,47 @@ const forecastBlock = (props) => {
     console.log(props.data);
     let conClass = 'forecast';
     let extra_details = null
-    if(props.type == 'today'){
+    if (props.type == 'today') {
         conClass = 'today forecast';
         extra_details = <Wrap><span><img src={require("../../assets/images/icon-umberella.png")} alt="" />20%</span>
-        <span><img src={require("../../assets/images/icon-wind.png")} alt="" />{props.data.wind}km/h</span>
-        <span><img src={require("../../assets/images/icon-compass.png")} alt="" />{props.data.compass}</span> 
+            <span><img src={require("../../assets/images/icon-wind.png")} alt="" />{props.data.wind}km/h</span>
+            <span><img src={require("../../assets/images/icon-compass.png")} alt="" />{props.data.compass}</span>
         </Wrap>
     }
-    
+
     return (
-        <div className={conClass}>
-            <div className="forecast-header">
-                { (props.type == 'today') ? <div className="day">{props.data.date}</div>: null }
-                <div className="date">{props.data.day }</div>
-            </div>
-            <div className="forecast-content">
-                <div className="location">{props.data.location}</div>
-                <div className="degree">
-                    <div className="num">{props.data.deg}<sup>o</sup>C</div>
-                    <div className="forecast-icon">
-                        <img src={require('../../assets/images/icons/icon-13.svg')} alt="123" width="90" />
+        <Wrap>
+            {(props.type == 'today') ? <div class="today forecast">
+                <div class="forecast-header">
+                    <div class="day">Monday</div>
+                    <div class="date">6 Oct</div>
+                </div>
+                <div class="forecast-content">
+                    <div class="location">New York</div>
+                    <div class="degree">
+                        <div class="num">23<sup>o</sup>C</div>
+                        <div class="forecast-icon">
+                            <img src={require("../../assets/images/icons/icon-1.svg")} alt="" width="90" />
+                        </div>
+                    </div>
+                    <span><img src={require("../../assets/images/icon-umberella.png")} alt="" />20%</span>
+                    <span><img src={require("../../assets/images/icon-wind.png")} alt="" />18km/h</span>
+                    <span><img src={require("../../assets/images/icon-compass.png")} alt="" />East</span>
+                </div>
+            </div> : <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day">Tuesday</div>
+                    </div>
+                    <div class="forecast-content">
+                        <div class="forecast-icon">
+                            <img src={require("../../assets/images/icons/icon-3.svg")} alt="" width="48" />
+                        </div>
+                        <div class="degree">23<sup>o</sup>C</div>
+                        <small>18<sup>o</sup></small>
                     </div>
                 </div>
-                {extra_details}
-            </div>
-        </div>
+            }
+        </Wrap>
     );
 }
 

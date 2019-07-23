@@ -79,7 +79,7 @@ class Forecast extends Component {
         }
         return (
             <Wrap>
-                <div className="hero" data-bg-image="images/banner.png">
+                <div className="hero" data-bg-image={require("../../assets/images/banner.png")}>
                     <div className="container">
                         <form action="#" className="find-location">
                             <input type="text" placeholder="Find your location..." />

@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import '../../assets/css/style.css';
 import '../../assets/fonts/font-awesome.min.css';
+import Banner from '../Banner/Banner';
 
 
 
