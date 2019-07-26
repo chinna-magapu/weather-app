@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Link, NavLink } from 'react-router-dom';
 
 
 const header = (props) => {
@@ -16,11 +17,10 @@ const header = (props) => {
                     <div className="main-navigation">
                         <button type="button" className="menu-toggle"><i className="fa fa-bars"></i></button>
                         <ul className="menu">
-                            <li className="menu-item current-menu-item"><a href="index.html">Home</a></li>
-                            <li className="menu-item"><a href="news.html">News</a></li>
-                            <li className="menu-item"><a href="live-cameras.html">Live cameras</a></li>
-                            <li className="menu-item"><a href="photos.html">Photos</a></li>
-                            <li className="menu-item"><a href="contact.html">Contact</a></li>
+                            <li className="menu-item"  ><NavLink activeClassName="current-menu-item" activeStyle={{ borderColor: '#009ad8', color: '009ad8' }} to="/" exact>Home</NavLink></li>
+                            <li className="menu-item" ><NavLink  activeStyle={{ borderColor: '#009ad8', color: '009ad8' }} to="/posts">Posts</NavLink></li>
+                            <li className="menu-item"><NavLink  activeStyle={{ borderColor: '#009ad8', color: '009ad8' }} to="/new-post">New Post</NavLink></li>
+                            <li className="menu-item"><NavLink  activeStyle={{ borderColor: '#009ad8', color: '009ad8' }} to="/contact">Contact</NavLink></li>
                         </ul>
                     </div>
                     <div className="mobile-navigation"></div>

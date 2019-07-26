@@ -1177,7 +1177,7 @@ form textarea {
         -webkit-transition: .3s ease;
                 transition: .3s ease;
         font-weight: 400; }
-      .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
+      .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a.current-menu-item a {
         border-color: #009ad8;
         color: #009ad8; }
 
@@ -1202,7 +1202,7 @@ form textarea {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
       .mobile-navigation .menu .menu-item:last-child {
         border-bottom: none; }
-      .mobile-navigation .menu .menu-item.current-menu-item a {
+      .mobile-navigation .menu .menu-item.current-menu-item .current-menu-item a {
         color: #009ad8; }
 
 .hero {
